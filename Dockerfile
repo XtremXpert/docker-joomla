@@ -1,4 +1,4 @@
-FROM xtremxpert/docker-phpapache:latest
+FROM xtremxpert/docker-phpapache:edge
 
 MAINTAINER Xtremxpert <xtremxpert@xtremxpert.com>
 
