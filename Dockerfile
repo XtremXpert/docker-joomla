@@ -11,7 +11,7 @@ RUN curl -o joomla.zip -SL https://github.com/joomla/joomla-cms/releases/downloa
     && rm joomla.zip \
     && mv /var/www/html/htaccess.txt /var/www/html/.htaccess \
     && rm /var/www/html/web.config.txt \
-    && chown -R apache:apache /var/www/html
+    && chown -R www-data:www-data /var/www/html
 
 EXPOSE 80
 EXPOSE 443
