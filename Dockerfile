@@ -11,14 +11,12 @@ RUN curl -o joomla.zip -SL https://github.com/joomla/joomla-cms/releases/downloa
     && rm joomla.zip \
     && mv /var/www/html/htaccess.txt /var/www/html/.htaccess \
     && rm /var/www/html/web.config.txt \
+    && rm /var/www/html/index.html
     && chown -R www-data:www-data /var/www/html
 
 EXPOSE 80
 EXPOSE 443
 
 VOLUME [/var/www/html]
-
-#ENTRYPOINT ["/usr/sbin/httpd"]
-#CMD ["-DFOREGROUND"]
 
 CMD ["/usr/bin/supervisord"]
